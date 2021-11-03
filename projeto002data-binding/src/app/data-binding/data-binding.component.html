@@ -1,0 +1,20 @@
+<section class="property-binding">
+  <article>
+    <h1>Interpolation / Interpolação</h1>
+    <p>String rendererizada com interpolação: {{ url }}</p>
+    <p>O resultado de 3 + 10 é igual a {{ 3 + 10 }}</p>
+    <p>
+      O resultado de 13 + 18 + retorno de getValor é igual a
+      {{ 13 + 18 + getValor() }}
+    </p>
+    <p>
+      O curso é de Angular .E. estou gostando? R:
+      {{ cursoAngular && getGostandoCurso() }}
+    </p>
+  </article>
+  <article>
+    <h1>s</h1>
+    <img src="{{ urlImagem }}" alt="imagem" />
+    <img [src]="urlImagem" alt="imagem" />
+  </article>
+</section>
