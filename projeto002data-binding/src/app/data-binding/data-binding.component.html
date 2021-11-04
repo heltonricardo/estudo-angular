@@ -12,9 +12,66 @@
       {{ cursoAngular && getGostandoCurso() }}
     </p>
   </article>
+
   <article>
-    <h1>s</h1>
+    <h1>Property Binding</h1>
     <img src="{{ urlImagem }}" alt="imagem" />
     <img [src]="urlImagem" alt="imagem" />
+  </article>
+
+  <article>
+    <h1>Class e Style Binding</h1>
+    <div>
+      Selecione uma opção:
+      <select #escolha (change)="(0)">
+        <option value="alert-success">Success</option>
+        <option value="alert-info">Info</option>
+        <option value="alert-warning">Warning</option>
+        <option value="alert-danger">Danger</option>
+      </select>
+      <br />
+      <br />
+
+      <div class="alert {{ escolha.value }}" role="alert">
+        Texto colorido conforme valor do combobox.
+      </div>
+
+      <div
+        role="alert"
+        class="alert alert-danger"
+        [style.display]="escolha.value === 'alert-danger' ? 'block' : 'none'"
+      >
+        Texto só aparece em caso de erro.
+      </div>
+
+      <div
+        role="alert"
+        class="alert"
+        [class.alert-success]="escolha.value === 'alert-success'"
+      >
+        Success
+      </div>
+      <div
+        role="alert"
+        class="alert"
+        [class.alert-info]="escolha.value === 'alert-info'"
+      >
+        Info
+      </div>
+      <div
+        role="alert"
+        class="alert"
+        [class.alert-warning]="escolha.value === 'alert-warning'"
+      >
+        Warning
+      </div>
+      <div
+        role="alert"
+        class="alert"
+        [class.alert-danger]="escolha.value === 'alert-danger'"
+      >
+        Danger
+      </div>
+    </div>
   </article>
 </section>
