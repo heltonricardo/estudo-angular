@@ -75,3 +75,33 @@
     </div>
   </article>
 </section>
+
+<section>
+  <article>
+    <h1>Event Binding</h1>
+    <div>
+      <button (click)="botaoClicado()" class="btn btn-primary">
+        Clique-me!
+      </button>
+      <br />
+      <br />
+      <input
+        #campoInput
+        type="text"
+        (keyup)="onKeyUp($event)"
+        (blur)="salvarValor(campoInput.value)"
+        (keyup.enter)="salvarValor(campoInput.value)"
+      />
+      <p>Valor atual: {{ valorAtual }}</p>
+      <p>Valor salvo: {{ valorSalvo }}</p>
+      <br />
+      <br />
+      <span
+        (mouseout)="onMouseOverOut()"
+        (mouseover)="onMouseOverOut()"
+        [class.highlight]="isMouseOver"
+        >Passe o mouse sobre esse texto.</span
+      >
+    </div>
+  </article>
+</section>
