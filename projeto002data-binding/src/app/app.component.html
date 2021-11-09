@@ -1,1 +1,6 @@
 <app-data-binding></app-data-binding>
+
+<button (click)="criar()" class="btn btn-primary">Criar</button>
+<button (click)="mudarValor()" class="btn btn-primary">Mudar valor</button>
+<button (click)="destruir()" class="btn btn-primary">Destruir</button>
+<app-ciclo *ngIf="apresentar" [valorInicial]="valor"></app-ciclo>
