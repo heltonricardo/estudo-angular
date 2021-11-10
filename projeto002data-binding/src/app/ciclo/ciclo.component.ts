@@ -14,7 +14,7 @@ import {
 @Component({
   selector: 'app-ciclo',
   templateUrl: './ciclo.component.html',
-  styleUrls: ['./ciclo.component.css'],
+  styleUrls: ['./ciclo.component.scss'],
 })
 // Anotação 01
 export class CicloComponent
