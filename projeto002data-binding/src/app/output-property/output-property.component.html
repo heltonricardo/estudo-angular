@@ -5,7 +5,13 @@
     </div>
 
     <div class="col col-md-auto col1">
-      <input class="form-control" type="text" [value]="valor" readonly />
+      <input
+        class="form-control"
+        type="text"
+        [value]="valor"
+        readonly
+        #campoInput
+      />
     </div>
 
     <div class="col col-md-auto col1">
